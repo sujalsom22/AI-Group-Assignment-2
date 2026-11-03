@@ -1,13 +1,12 @@
 # AI Group Assignment 2 - Hacker Gang
 
 ## Team Members
-| Name | Roll Number |
-| :--- | :--- |
-| Harshit Kandpal | B24CS505 |
-| Vedant Chandak | B24EC039 |
-| Sujal Som | B24DS032 |
-| Tanmay Jaiswal | B24DS033 |
-| Sourav Singh Yadav | B24EC032 |
+| Name | Roll Number | Assigned Problem |
+| :--- | :--- | :--- |
+| Harshit Kandpal (Problem 3) | B24CS505 | Problem 3 |
+| Vedant Chandak | B24EC039 | |
+| Sujal Som | B24DS032 | |
+| Tanmay Jaiswal | B24DS033 | |
 
 ---
 
@@ -15,7 +14,6 @@
 ```
 .
 ├── names.txt
-├── assignment.md
 ├── README.md
 └── Problem3/
     ├── royal_archive_access.pl

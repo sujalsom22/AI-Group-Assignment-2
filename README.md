@@ -15,9 +15,45 @@
 .
 ├── names.txt
 ├── README.md
+├── Problem2/
+│   ├── Domain.pddl
+│   ├── Problem.pddl
+│   ├── Problem_extended.pddl
+│   ├── ANALYSIS.md
+│   ├── plans/
+│   ├── planner_logs/
+│   └── verification/
 └── Problem3/
     ├── royal_archive_access.pl
     └── output.png
+```
+
+---
+
+## Problem 2: Sample Collection Planning using PDDL
+
+### Overview
+An autonomous Mars rover with two storage bays collects five rocks (seven in the extended scenario) and returns them to Base. Hard rocks require a drill, and the slope from SiteC to SiteD can be travelled in only one direction. The extended scenario adds two rocks and closes Base ↔ SiteB.
+
+The model uses only `:strips` and `:typing`. Plans were generated with Fast Downward 26.6: greedy best-first search with the FF heuristic, and A* with the admissible LM-cut heuristic. Step-by-step simulation confirms that every plan leaves all rocks at Base, both bays empty, and the rover at Base.
+
+| Scenario | Satisficing length | Optimal length |
+| :--- | ---: | ---: |
+| Base (5 rocks) | 30 | 25 |
+| Extended (7 rocks, dust storm) | 46 | 40 |
+
+The full comparison, action sequences, final states, and route analysis are in [Problem2/ANALYSIS.md](Problem2/ANALYSIS.md).
+
+### How to Run
+
+Docker is required for planning. Verification uses Python only.
+
+```bash
+cd Problem2
+docker pull aibasel/downward:latest
+python run_planners.py
+python verify_plan.py Problem.pddl plans/scenario1_optimal.soln
+python verify_plan.py Problem_extended.pddl plans/scenario2_optimal.soln
 ```
 
 ---

@@ -1,0 +1,51 @@
+; Problem 2 extended scenario. Optimal configuration.
+; Planner: Fast Downward 26.6
+; Search: A* (astar) with reopening
+; Heuristic: LM-cut (lmcut), admissible
+; Plan length: 40
+; Total actions: 40
+; Plan cost: 40
+; States expanded: 2230074
+; States generated: 8993315
+; Search time: 146.321412s
+(move curiosity base site-a)
+(move curiosity site-a site-c)
+(move curiosity site-c site-d)
+(collect-soft curiosity rock4 bay1 site-d)
+(move curiosity site-d site-b)
+(collect-soft curiosity rock2 bay2 site-b)
+(move curiosity site-b site-d)
+(move curiosity site-d site-e)
+(pick-drill curiosity drill1 site-e)
+(move curiosity site-e site-c)
+(move curiosity site-c site-a)
+(move curiosity site-a base)
+(deposit curiosity rock2 bay2 base)
+(deposit curiosity rock4 bay1 base)
+(move curiosity base site-a)
+(move curiosity site-a site-c)
+(move curiosity site-c site-e)
+(move curiosity site-e site-f)
+(collect-hard curiosity rock5 bay1 site-f drill1)
+(collect-hard curiosity rock7 bay2 site-f drill1)
+(move curiosity site-f site-e)
+(move curiosity site-e site-c)
+(move curiosity site-c site-a)
+(move curiosity site-a base)
+(deposit curiosity rock5 bay1 base)
+(deposit curiosity rock7 bay2 base)
+(move curiosity base site-a)
+(move curiosity site-a site-c)
+(collect-hard curiosity rock3 bay1 site-c drill1)
+(move curiosity site-c site-e)
+(collect-soft curiosity rock6 bay2 site-e)
+(move curiosity site-e site-c)
+(move curiosity site-c site-a)
+(move curiosity site-a base)
+(deposit curiosity rock3 bay1 base)
+(deposit curiosity rock6 bay2 base)
+(move curiosity base site-a)
+(collect-soft curiosity rock1 bay1 site-a)
+(move curiosity site-a base)
+(deposit curiosity rock1 bay1 base)
+; cost = 40 (unit cost)

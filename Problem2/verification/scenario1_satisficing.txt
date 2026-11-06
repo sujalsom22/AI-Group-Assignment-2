@@ -1,0 +1,80 @@
+Problem: Problem.pddl
+Plan: scenario1_satisficing.soln
+Actions: 30
+
+Step 0 (initial)
+  rover@base; drill at site-e; bay1=empty, bay2=empty; rock1@site-a, rock2@site-b, rock3@site-c, rock4@site-d, rock5@site-f
+Step 1: (move curiosity base site-a)
+  rover@site-a; drill at site-e; bay1=empty, bay2=empty; rock1@site-a, rock2@site-b, rock3@site-c, rock4@site-d, rock5@site-f
+Step 2: (collect-soft curiosity rock1 bay1 site-a)
+  rover@site-a; drill at site-e; bay1=rock1, bay2=empty; rock1 in bay1, rock2@site-b, rock3@site-c, rock4@site-d, rock5@site-f
+Step 3: (move curiosity site-a base)
+  rover@base; drill at site-e; bay1=rock1, bay2=empty; rock1 in bay1, rock2@site-b, rock3@site-c, rock4@site-d, rock5@site-f
+Step 4: (deposit curiosity rock1 bay1 base)
+  rover@base; drill at site-e; bay1=empty, bay2=empty; rock1@base, rock2@site-b, rock3@site-c, rock4@site-d, rock5@site-f
+Step 5: (move curiosity base site-b)
+  rover@site-b; drill at site-e; bay1=empty, bay2=empty; rock1@base, rock2@site-b, rock3@site-c, rock4@site-d, rock5@site-f
+Step 6: (collect-soft curiosity rock2 bay1 site-b)
+  rover@site-b; drill at site-e; bay1=rock2, bay2=empty; rock1@base, rock2 in bay1, rock3@site-c, rock4@site-d, rock5@site-f
+Step 7: (move curiosity site-b base)
+  rover@base; drill at site-e; bay1=rock2, bay2=empty; rock1@base, rock2 in bay1, rock3@site-c, rock4@site-d, rock5@site-f
+Step 8: (deposit curiosity rock2 bay1 base)
+  rover@base; drill at site-e; bay1=empty, bay2=empty; rock1@base, rock2@base, rock3@site-c, rock4@site-d, rock5@site-f
+Step 9: (move curiosity base site-a)
+  rover@site-a; drill at site-e; bay1=empty, bay2=empty; rock1@base, rock2@base, rock3@site-c, rock4@site-d, rock5@site-f
+Step 10: (move curiosity site-a site-c)
+  rover@site-c; drill at site-e; bay1=empty, bay2=empty; rock1@base, rock2@base, rock3@site-c, rock4@site-d, rock5@site-f
+Step 11: (move curiosity site-c site-e)
+  rover@site-e; drill at site-e; bay1=empty, bay2=empty; rock1@base, rock2@base, rock3@site-c, rock4@site-d, rock5@site-f
+Step 12: (pick-drill curiosity drill1 site-e)
+  rover@site-e; drill carried; bay1=empty, bay2=empty; rock1@base, rock2@base, rock3@site-c, rock4@site-d, rock5@site-f
+Step 13: (move curiosity site-e site-c)
+  rover@site-c; drill carried; bay1=empty, bay2=empty; rock1@base, rock2@base, rock3@site-c, rock4@site-d, rock5@site-f
+Step 14: (collect-hard curiosity rock3 bay1 site-c drill1)
+  rover@site-c; drill carried; bay1=rock3, bay2=empty; rock1@base, rock2@base, rock3 in bay1, rock4@site-d, rock5@site-f
+Step 15: (move curiosity site-c site-d)
+  rover@site-d; drill carried; bay1=rock3, bay2=empty; rock1@base, rock2@base, rock3 in bay1, rock4@site-d, rock5@site-f
+Step 16: (collect-soft curiosity rock4 bay2 site-d)
+  rover@site-d; drill carried; bay1=rock3, bay2=rock4; rock1@base, rock2@base, rock3 in bay1, rock4 in bay2, rock5@site-f
+Step 17: (move curiosity site-d site-b)
+  rover@site-b; drill carried; bay1=rock3, bay2=rock4; rock1@base, rock2@base, rock3 in bay1, rock4 in bay2, rock5@site-f
+Step 18: (move curiosity site-b base)
+  rover@base; drill carried; bay1=rock3, bay2=rock4; rock1@base, rock2@base, rock3 in bay1, rock4 in bay2, rock5@site-f
+Step 19: (deposit curiosity rock3 bay1 base)
+  rover@base; drill carried; bay1=empty, bay2=rock4; rock1@base, rock2@base, rock3@base, rock4 in bay2, rock5@site-f
+Step 20: (deposit curiosity rock4 bay2 base)
+  rover@base; drill carried; bay1=empty, bay2=empty; rock1@base, rock2@base, rock3@base, rock4@base, rock5@site-f
+Step 21: (move curiosity base site-a)
+  rover@site-a; drill carried; bay1=empty, bay2=empty; rock1@base, rock2@base, rock3@base, rock4@base, rock5@site-f
+Step 22: (move curiosity site-a site-c)
+  rover@site-c; drill carried; bay1=empty, bay2=empty; rock1@base, rock2@base, rock3@base, rock4@base, rock5@site-f
+Step 23: (move curiosity site-c site-e)
+  rover@site-e; drill carried; bay1=empty, bay2=empty; rock1@base, rock2@base, rock3@base, rock4@base, rock5@site-f
+Step 24: (move curiosity site-e site-f)
+  rover@site-f; drill carried; bay1=empty, bay2=empty; rock1@base, rock2@base, rock3@base, rock4@base, rock5@site-f
+Step 25: (collect-hard curiosity rock5 bay1 site-f drill1)
+  rover@site-f; drill carried; bay1=rock5, bay2=empty; rock1@base, rock2@base, rock3@base, rock4@base, rock5 in bay1
+Step 26: (move curiosity site-f site-e)
+  rover@site-e; drill carried; bay1=rock5, bay2=empty; rock1@base, rock2@base, rock3@base, rock4@base, rock5 in bay1
+Step 27: (move curiosity site-e site-c)
+  rover@site-c; drill carried; bay1=rock5, bay2=empty; rock1@base, rock2@base, rock3@base, rock4@base, rock5 in bay1
+Step 28: (move curiosity site-c site-a)
+  rover@site-a; drill carried; bay1=rock5, bay2=empty; rock1@base, rock2@base, rock3@base, rock4@base, rock5 in bay1
+Step 29: (move curiosity site-a base)
+  rover@base; drill carried; bay1=rock5, bay2=empty; rock1@base, rock2@base, rock3@base, rock4@base, rock5 in bay1
+Step 30: (deposit curiosity rock5 bay1 base)
+  rover@base; drill carried; bay1=empty, bay2=empty; rock1@base, rock2@base, rock3@base, rock4@base, rock5@base
+
+Final state
+  rover@base; drill carried; bay1=empty, bay2=empty; rock1@base, rock2@base, rock3@base, rock4@base, rock5@base
+Goal literals
+  [OK] (at-rover curiosity base)
+  [OK] (at-rock rock1 base)
+  [OK] (at-rock rock2 base)
+  [OK] (at-rock rock3 base)
+  [OK] (at-rock rock4 base)
+  [OK] (at-rock rock5 base)
+  [OK] (empty bay1)
+  [OK] (empty bay2)
+
+GOAL SATISFIED
